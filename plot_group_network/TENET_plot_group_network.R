@@ -8,8 +8,6 @@ lapply(libraries, function(x) if (!(x %in% installed.packages())) {
     install.packages(x)
 })
 lapply(libraries, library, quietly = TRUE, character.only = TRUE)
-# install.packages("qgraph")
-# library(qgraph)
 
 # set the working directory
 #setwd("C:/...")
