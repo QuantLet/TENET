@@ -1,4 +1,4 @@
-Name of QuantLet: TENET_totalconnectedness
+Name of QuantLet: TENET_total_connectedness
 
 Published in: TENET
 
