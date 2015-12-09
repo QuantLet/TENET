@@ -1,0 +1,27 @@
+Name of QuantLet: TENET_VaR_est_plot_CoVaR_sim_l
+
+Published in: TENET: Tail-Event driven NETwork risk
+
+Description: estimate the Value at Risks (VaRs) of 100 financial institutions 
+by using moving window estimation based on seven macro state variables.
+Then plot the VaR of JP Morgan as an example. As comparison, plot the estimated 
+CoVaR by using Single-Index Modle with LASSO and estimated CoVaR by using linear
+quantile LASSO model
+
+Keywords: tail, quantile regression, VaR, estimation, risk, macro state variables, 
+moving window
+
+Author: Lining Yu 
+
+Submitted:
+
+Datafile: 100_firms_returns_and_macro.csv
+CoVaR_sim_l_JPM.csv
+
+Input: log returns of 100 financial institutions and 7 macro state variables
+
+Output: estimated VaRs for 100 financial institutions
+
+Example: Plot log returns of of JP Morgan, the estimated VaR, the estimated CoVaR 
+by using Single-Index Modle with LASSO and estimated CoVaR by using linear 
+quantile LASSO model
