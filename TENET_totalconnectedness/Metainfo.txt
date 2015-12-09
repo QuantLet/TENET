@@ -1,0 +1,19 @@
+Name of QuantLet: TENET_totalconnectedness
+
+Published in: TENET
+
+Description: 'Plots the total connectedness and the averaged lambda 
+of 100 financial institutions from 20071207 to 20130105.'
+
+Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection, 
+dimension reduction'
+
+Author: Lining Yu 
+
+Submitted:
+
+Datafile: total_connectedness_and_averaged_lambda.csv
+
+Example: 
+- 'Plot of the total connectedness and the averaged lambda of 100 financial 
+institutions.'
