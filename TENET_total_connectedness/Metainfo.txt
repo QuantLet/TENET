@@ -14,6 +14,5 @@ Submitted:
 
 Datafile: total_connectedness_and_averaged_lambda.csv
 
-Example: 
-- 'Plot of the total connectedness and the averaged lambda of 100 financial 
-institutions.'
+Example: 'Plot of the total connectedness (blue solid line) and the averaged 
+lambda (black dashed line) of 100 financial institutions.'
