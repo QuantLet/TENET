@@ -21,6 +21,7 @@ Input: log returns of 100 financial institutions and 7 macro state variables
 
 Output: estimated VaRs for 100 financial institutions
 
-Example: 'Plot of the log returns of JP Morgan (black points), its estimated VaR 
+Example: 
+- 'Plot of the log returns of JP Morgan (black points), its estimated VaR 
 (red line), its estimated CoVaR by using Single-Index Model with LASSO (blue 
-line), and its estimated CoVaR by using linear quantile LASSO model (green line)'
+line), and its estimated CoVaR by using linear quantile LASSO model (green line).'
