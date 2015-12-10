@@ -2,10 +2,10 @@ Name of QuantLet: TENET_VaR_CoVaR
 
 Published in: TENET
 
-Description: 'estimate the Value at Risks (VaRs) of 100 financial institutions
-by using moving window estimation based on seven macro state variables.Then plot
+Description: 'Estimates the Value at Risks (VaRs) of 100 financial institutions
+by using moving window estimation based on seven macro state variables. Then plot
 the log returns of JP Morgan (black points), plot VaR of JP Morgan (red line) as
-an example. As comparison, plot the estimated  CoVaR by using Single-Index Modle
+an example. As comparison, plot the estimated  CoVaR by using Single-Index Model
 with LASSO (blue line) and estimated CoVaR by using linear quantile LASSO model
 (green line)'
 
@@ -22,7 +22,7 @@ Input: log returns of 100 financial institutions and 7 macro state variables
 Output: estimated VaRs for 100 financial institutions
 
 Example:  
--plot the log returns of of JP Morgan 
--plot its estimated VaR
--plot its estimated CoVaR by using Single-Index Modle with LASSO  
--plot its estimated CoVaR by using linear LASSO quantile LASSO model
+- plot of the log returns of of JP Morgan 
+- plot of its estimated VaR
+- plot of its estimated CoVaR by using Single-Index Model with LASSO  
+- plot of its estimated CoVaR by using linear LASSO quantile LASSO model
