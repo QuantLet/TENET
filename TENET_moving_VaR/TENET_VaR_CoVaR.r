@@ -6,7 +6,7 @@ graphics.off()
 #setwd("C:/...")
 
 # install and load packages
-libraries = c("quantreg")
+libraries  = c("quantreg")
 lapply(libraries, function(x) if (!(x %in% installed.packages())) {
     install.packages(x)
 })

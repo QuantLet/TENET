@@ -1,27 +1,28 @@
-Name of QuantLet: TENET_VaR_est_plot_CoVaR_sim_l
+Name of QuantLet: TENET_VaR_CoVaR
 
 Published in: TENET: Tail-Event driven NETwork risk
 
-Description: estimate the Value at Risks (VaRs) of 100 financial institutions 
-by using moving window estimation based on seven macro state variables.
-Then plot the VaR of JP Morgan as an example. As comparison, plot the estimated 
-CoVaR by using Single-Index Modle with LASSO and estimated CoVaR by using linear
-quantile LASSO model
+Description: 'estimate the Value at Risks (VaRs) of 100 financial institutions
+by using moving window estimation based on seven macro state variables.Then plot
+the log returns of JP Morgan (black points), plot VaR of JP Morgan (red line) as
+an example. As comparison, plot the estimated  CoVaR by using Single-Index Modle
+with LASSO (blue line) and estimated CoVaR by using linear quantile LASSO model
+(green line)'
 
-Keywords: tail, quantile regression, VaR, estimation, risk, macro state variables, 
-moving window
+Keywords: tail, quantile regression, VaR, estimation, risk
 
-Author: Lining Yu 
+Author: Lining Yu
 
 Submitted:
 
-Datafile: 100_firms_returns_and_macro.csv
-CoVaR_sim_l_JPM.csv
+Datafile: 100_firms_returns_and_macro.csv, CoVaR_sim_l_JPM.csv
 
 Input: log returns of 100 financial institutions and 7 macro state variables
 
 Output: estimated VaRs for 100 financial institutions
 
-Example: Plot log returns of of JP Morgan, the estimated VaR, the estimated CoVaR 
-by using Single-Index Modle with LASSO and estimated CoVaR by using linear 
-quantile LASSO model
+Example:  
+-plot the log returns of of JP Morgan 
+-plot its estimated VaR
+-plot its estimated CoVaR by using Single-Index Modle with LASSO  
+-plot its estimated CoVaR by using linear LASSO quantile LASSO model
