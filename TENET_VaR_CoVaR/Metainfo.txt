@@ -1,6 +1,6 @@
 Name of QuantLet: TENET_VaR_CoVaR
 
-Published in: TENET: Tail-Event driven NETwork risk
+Published in: TENET
 
 Description: 'estimate the Value at Risks (VaRs) of 100 financial institutions
 by using moving window estimation based on seven macro state variables.Then plot
