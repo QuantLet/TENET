@@ -1,11 +1,11 @@
-﻿
+
 Name of QuantLet: TENET_group_network
 
 Published in: TENET
 
 Description: 'Plot the network based on an adjacency matrix before and after
 thresholding, so that we can see the directional connection caused by spillover
-effects among 100 financial institutions.''
+effects among 100 financial institutions.'
 
 Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection,
 dimension reduction'
