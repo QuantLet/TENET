@@ -1,9 +1,9 @@
-﻿
+
 Name of QuantLet: TENET_total_in_out_groups
 
 Published in: TENET
 
-Description: 'Plot the total incoming and outgoing links of four financial
+Description: 'Plots the total incoming and outgoing links of four financial
 industry groups: Depositories (red solid line), Insurances (blue dashed line),
 Broker-Dealers (green dotted line), Others (violet dash-dot line)'
 
@@ -17,5 +17,9 @@ Submitted:
 Datafile: total_in_and_out.csv
 
 Example: 
-- Plot total incoming connectedness of four groups  
-- Plot total outgoing connectedness of four groups
+- 'Plot of the total incoming connectedness of four groups: Depositories (red 
+solid line), Insurances (blue dashed line), Broker-Dealers (green dotted line), 
+Others (violet dash-dot line)'  
+- 'Plot of the total outgoing connectedness of four groups: Depositories (red 
+solid line), Insurances (blue dashed line), Broker-Dealers (green dotted line), 
+Others (violet dash-dot line)'
