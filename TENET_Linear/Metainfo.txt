@@ -9,16 +9,16 @@ include log returns of 99 firms (except for firm k) 7 macro state variables and
 4 firm k’s characteristics.’
 
 Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection,
-dimension reduction'
+dimension reduction, risk'
 
-See also: quantilelasso, SIMqrL1
+See also: quantilelasso, SIMqrL1, TENET_SIM
 
 Author: Weining Wang, Lining Yu
 
 Submitted:
 
 Datafile: ‘100_firms_returns_and_macro_2015-04-15.csv, Bal_sheet.csv,
-VaR_movingwindows_20150617’
+VaR_movingwindows_20150617.csv’
 
 Input: 
 'yw (ws+1)- response vector
@@ -27,6 +27,6 @@ tau - scalar quantile level
 VaRM_est p- estimated VaR and macro variables'
 
 Output:
-'lambda_l[i] -scalar estimated penalization parameter
+'lambda_l[i] - scalar estimated penalization parameter
 beta_l[i, ] p- estimated coefficients
-CoVaR_l[i] -scalar estimated CoVaR'
+CoVaR_l[i] - scalar estimated CoVaR'
