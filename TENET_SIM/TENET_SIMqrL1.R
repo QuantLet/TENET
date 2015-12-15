@@ -76,6 +76,7 @@ sim = function(Qy, Qxx, Qp, Qmaxiter, Qi = l, Qj = k, LVaRest) {
     lambda_new = (-fit$lambda[isnum])
     iter       = iter + 1
   }
+  
   print(lambda_new)
   print(which(beta.new != 0))
   index_final  = rowSums(t(t(Qxx) * beta.new))
