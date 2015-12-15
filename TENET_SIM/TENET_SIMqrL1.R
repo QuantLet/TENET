@@ -26,7 +26,6 @@ sim = function(Qy, Qxx, Qp, Qmaxiter, Qi = l, Qj = k, LVaRest) {
   print(lambda_in)
   d = length(beta.in)
   n = NROW(Qy)
-  print(which(beta.in != 0))
   # standardize the initial betas
   beta.in  = beta.in/sqrt(sum(beta.in^2))
   # initialize the new estimated betas in the iterations
@@ -75,15 +74,15 @@ sim = function(Qy, Qxx, Qp, Qmaxiter, Qi = l, Qj = k, LVaRest) {
     beta.new   = fit$beta[isnum, ]
     beta.new   = beta.new/sqrt(sum(beta.new^2))
     lambda_new = (-fit$lambda[isnum])
-    print(lambda_new)
     iter       = iter + 1
   }
-  
+  print(lambda_new)
+  print(which(beta.new != 0))
   index_final  = rowSums(t(t(Qxx) * beta.new))
   value_x      = seq(min(index_final), max(index_final), length = length(Qy))
   linkfunest   = matrix(0, length(value_x), 1)
   for (i in 1:length(value_x)) {
-    fit2       = lprq0(index_final, Qy, hp, Qp, value_x[i])
+    fit2          = lprq0(index_final, Qy, hp, Qp, value_x[i])
     linkfunest[i] = fit2$fv
   }
   index_est = LVaRest %*% beta.new
