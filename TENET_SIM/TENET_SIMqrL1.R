@@ -46,7 +46,7 @@ sim = function(Qy, Qxx, Qp, Qmaxiter, Qi = l, Qj = k, LVaRest) {
     index_x = rowSums(t(t(Qxx) * beta.in))
     yorder  = Qy[order(index_x)]
     xorder  = sort(index_x)
-    hm = dpill(xorder[2:(length(index_x) - 2)], yorder[2:(length(index_x) - 2)])
+    hm = dpill(xorder[1:length(index_x)], yorder[1:length(index_x)])
     hm[is.na(hm)] = 0.08
     hp = 10 * hm * (Qp * (1 - Qp)/(dnorm(qnorm(Qp)))^2)^0.2
     x0 = 0
