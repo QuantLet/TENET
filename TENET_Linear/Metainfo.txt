@@ -17,14 +17,14 @@ Author: Weining Wang, Lining Yu
 
 Submitted:
 
-Datafile: ‘100_firms_returns_and_macro_2015-04-15.csv, Bal_sheet.csv,
-VaR_movingwindows_20150617.csv’
+Datafile: '100_firms_returns_and_macro_2015-04-15.csv, Bal_sheet.csv,
+VaR_movingwindows_20150617.csv'
 
 Input: 
-- yw (ws+1) : response vector
+- yw : (ws+1) response vector
 - xxw : px(ws+1) covariate matrix
 - tau : scalar quantile level
-- VaRM_est p : estimated VaR and macro variables
+- VaRM_est : p estimated VaR and macro variables
 
 Output:
 - lambda_l[i] : scalar estimated penalization parameter
