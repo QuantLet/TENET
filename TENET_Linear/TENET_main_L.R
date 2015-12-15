@@ -55,7 +55,6 @@ for (k in 1:100) {
   
   # start the moving window estimation
   for (i in 1:(n - ws)) {
-    cat("Time:")
     print(i)
     yw  = y[i:(i + ws)]
     MBw = MB[i:(i + ws), ]
