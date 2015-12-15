@@ -1,7 +1,8 @@
 # clear all variables
 rm(list = ls(all = TRUE))
 graphics.off()
-# set the working directory setwd('C:/...')
+# set the working directory 
+# setwd('C:/...')
 # install and load packages
 libraries = c("quantreg", "KernSmooth", "SparseM", "MASS")
 lapply(libraries, function(x) if (!(x %in% installed.packages())) {
@@ -51,6 +52,7 @@ for (k in 1:100) {
   partial_der = matrix(0, (n - ws), p)
   
   for (l in 1:(n - ws)) {
+    print(l)
     yw  = y[l:(l + ws)]
     MBw = MB[l:(l + ws), ]
     mb  = matrix(0, ws + 1, ncol(MB))
