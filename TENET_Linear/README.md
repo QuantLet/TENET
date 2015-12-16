@@ -12,7 +12,7 @@ Published in: TENET
 Description: 'estimates Conditional Value at Risk (CoVaR) of 100 financial
 institutions by using linear quantile lasso algorithm. The 110 covariates
 include log returns of 99 firms (except for firm k) 7 macro state variables and
-4 firm k’s characteristics.'
+4 firm k’s characteristics. The data is not publicly published.'
 
 Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection,
 dimension reduction, risk'
