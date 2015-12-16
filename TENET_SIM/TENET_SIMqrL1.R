@@ -47,7 +47,11 @@ sim = function(Qy, Qxx, Qp, Qmaxiter, Qi = l, Qj = k, LVaRest) {
     index_x = rowSums(t(t(Qxx) * beta.in))
     yorder  = Qy[order(index_x)]
     xorder  = sort(index_x)
-    hm = dpill(xorder[1:length(index_x)], yorder[1:length(index_x)], truncate = FALSE)
+    hm = tryCatch({
+    dpill(xorder[1:(length(index_x))], yorder[1:(length(index_x))])
+    }, error=function(e){
+    tryCatch(0.08)
+    }) 
     hm[is.na(hm)] = 0.08
     hp = 10 * hm * (Qp * (1 - Qp)/(dnorm(qnorm(Qp)))^2)^0.2
     x0 = 0
@@ -81,8 +85,16 @@ sim = function(Qy, Qxx, Qp, Qmaxiter, Qi = l, Qj = k, LVaRest) {
   print(lambda_new)
   print(which(beta.new != 0))
   index_final  = rowSums(t(t(Qxx) * beta.new))
-  value_x      = seq(min(index_final), max(index_final), length = length(Qy))
-  linkfunest   = matrix(0, length(value_x), 1)
+  orderx       = sort(index_final)
+  ordery       = Qy[order(index_final)]
+  hm = tryCatch({
+  dpill(xorder[1:(length(index_final))], yorder[1:(length(index_final))])
+  }, error=function(e){
+  tryCatch(0.08)
+  }) 
+  hm[is.na(hm)] = 0.08
+  value_x       = seq(min(index_final), max(index_final), length = length(Qy))
+  linkfunest    = matrix(0, length(value_x), 1)
   for (i in 1:length(value_x)) {
     fit2          = lprq0(index_final, Qy, hp, Qp, value_x[i])
     linkfunest[i] = fit2$fv
