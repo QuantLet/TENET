@@ -4,17 +4,15 @@
 ## [<img src="https://github.com/QuantLet/Styleguide-and-Validation-procedure/blob/master/pictures/qloqo.png" alt="Visit QuantNet">](http://quantlet.de/) **TENET_VaR_CoVaR** [<img src="https://github.com/QuantLet/Styleguide-and-Validation-procedure/blob/master/pictures/QN2.png" width="60" alt="Visit QuantNet 2.0">](http://quantlet.de/d3/ia)
 
 ```yaml
-
 Name of QuantLet: TENET_VaR_CoVaR
 
 Published in: TENET
 
-Description: 'Estimates the Value at Risks (VaRs) of 100 financial institutions
-using moving window estimation based on seven macro state variables. The plot shows 
-the log returns of JP Morgan (black points) and VaR of JP Morgan (red line) as an 
-example. The estimated CoVaR by using Single-Index Model with LASSO (blue line) and 
-estimated CoVaR using linear quantile LASSO model(green line) are also plotted as 
-comparison.'
+Description: 'Estimates the Value at Risks (VaRs) of 100 financial institutions using moving window
+estimation based on seven macro state variables. The plot shows the log returns of JP Morgan (black
+points) and VaR of JP Morgan (red line) as an example. The estimated CoVaR by using Single-Index
+Model with LASSO (blue line) and estimated CoVaR using linear quantile LASSO model(green line) are
+also plotted as comparison.'
 
 Keywords: tail, quantile regression, VaR, estimation, risk
 
@@ -28,10 +26,9 @@ Input: log returns of 100 financial institutions and 7 macro state variables
 
 Output: estimated VaRs for 100 financial institutions
 
-Example: 'Plot of the log returns of JP Morgan (black points), its estimated VaR 
-(red line), its estimated CoVaR by using Single-Index Model with LASSO (blue 
-line), and its estimated CoVaR by using linear quantile LASSO model (green line).'
-
+Example: 'Plot of the log returns of JP Morgan (black points), its estimated VaR (red line), its
+estimated CoVaR by using Single-Index Model with LASSO (blue line), and its estimated CoVaR by
+using linear quantile LASSO model (green line).'
 ```
 
 ![Picture1](TENET_VaR_CoVaR.png)
