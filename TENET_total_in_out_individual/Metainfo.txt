@@ -15,5 +15,3 @@ Author: Lining Yu
 Submitted:
 
 Datafile: tot_c_overtime.csv
-
-

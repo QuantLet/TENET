@@ -1,3 +1,4 @@
+
 # clear all variables
 rm(list = ls(all = TRUE))
 graphics.off()
@@ -16,4 +17,3 @@ plot(dt, total.c, ylab = "", xlab = "", pch = 16, col = "white", cex.axis = 1.8,
 lines(smooth.spline(dt, total.c, spar = 0.8), lwd = 5, col = "blue")
 lines(smooth.spline(dt, average_lambda, df = 5, spar = 0.8), col = "black", lty = 2, 
       lwd = 5)
-

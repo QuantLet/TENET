@@ -1,3 +1,4 @@
+
 sim = function(Qy, Qxx, Qp, Qmaxiter, Qi = l, Qj = k, LVaRest) {
   # local polynomial regression quantile which is used in the iteration
   lprq0 = function(x, y, h, tau, x0) {
@@ -104,7 +105,3 @@ sim = function(Qy, Qxx, Qp, Qmaxiter, Qi = l, Qj = k, LVaRest) {
   finalresults$c.fi = c.fi
   return(finalresults)
 }
-
-
-
- 

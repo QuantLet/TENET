@@ -15,5 +15,3 @@ Author: Lining Yu
 Submitted:
 
 Datafile: 100 companylist 2012 classified by industry, tot_c_overtime.csv
-
-

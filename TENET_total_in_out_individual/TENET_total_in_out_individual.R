@@ -1,3 +1,4 @@
+
 # clear all variables
 rm(list = ls(all = TRUE))
 graphics.off()
@@ -39,4 +40,3 @@ for (i in 1:100) {
   # each firm emits the links to others
   print(sort(out_firms, decreasing = TRUE)[1:3])
 }
- 

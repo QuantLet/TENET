@@ -1,3 +1,4 @@
+
 # clear all variables
 rm(list = ls(all = TRUE))
 graphics.off()
@@ -67,6 +68,3 @@ lines(dt_est, CoVaR_l, lwd = 3, col = "green4")
 
 # plot the estimated VaR of JP morgan by using moving window estimation
 lines(dt_est, VaR[, i], lwd = 3, col = "red")
-
-
- 
