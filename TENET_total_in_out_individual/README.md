@@ -4,24 +4,21 @@
 ## [<img src="https://github.com/QuantLet/Styleguide-and-Validation-procedure/blob/master/pictures/qloqo.png" alt="Visit QuantNet">](http://quantlet.de/) **TENET_total_in_out_individual** [<img src="https://github.com/QuantLet/Styleguide-and-Validation-procedure/blob/master/pictures/QN2.png" width="60" alt="Visit QuantNet 2.0">](http://quantlet.de/d3/ia)
 
 ```yaml
-
 Name of QuantLet: TENET_total_in_out_individual
 
 Published in: TENET
 
-Description: 'Ranks the total incoming and outgoing links for each individual 
-firm, and lists the first three most influential firms with respect to incoming 
-and outgoing links for each firm'
+Description: 'Ranks the total incoming and outgoing links for each individual firm, and lists the
+first three most influential firms with respect to incoming and outgoing links for each firm'
 
-Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection,
-dimension reduction'
+Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection, dimension
+reduction'
 
 Author: Lining Yu
 
 Submitted:
 
 Datafile: tot_c_overtime.csv
-
 ```
 
 
