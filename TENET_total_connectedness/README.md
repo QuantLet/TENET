@@ -4,26 +4,24 @@
 ## [<img src="https://github.com/QuantLet/Styleguide-and-Validation-procedure/blob/master/pictures/qloqo.png" alt="Visit QuantNet">](http://quantlet.de/) **TENET_total_connectedness** [<img src="https://github.com/QuantLet/Styleguide-and-Validation-procedure/blob/master/pictures/QN2.png" width="60" alt="Visit QuantNet 2.0">](http://quantlet.de/d3/ia)
 
 ```yaml
-
 Name of QuantLet: TENET_total_connectedness
 
 Published in: TENET
 
-Description: 'Plots the total connectedness and the averaged lambda 
-of 100 financial institutions from 20071207 to 20130105.'
+Description: 'Plots the total connectedness and the averaged lambda of 100 financial institutions
+from 20071207 to 20130105.'
 
-Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection, 
-dimension reduction'
+Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection, dimension
+reduction'
 
-Author: Lining Yu 
+Author: Lining Yu
 
 Submitted:
 
 Datafile: total_connectedness_and_averaged_lambda.csv
 
-Example: 'Plot of the total connectedness (blue solid line) and the averaged 
-lambda (black dashed line) of 100 financial institutions.'
-
+Example: 'Plot of the total connectedness (blue solid line) and the averaged lambda (black dashed
+line) of 100 financial institutions.'
 ```
 
 ![Picture1](TENET_total_connectedness.png)

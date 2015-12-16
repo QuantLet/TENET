@@ -23,10 +23,10 @@ Submitted:
 Datafile: total_in_and_out.csv
 
 Example: 
-- 'Plot of the total incoming connectedness of four groups: Depositories (red 
+- 'Plot of the total incoming connectedness of four groups - Depositories (red 
 solid line), Insurances (blue dashed line), Broker-Dealers (green dotted line), 
 Others (violet dash-dot line)'  
-- 'Plot of the total outgoing connectedness of four groups: Depositories (red 
+- 'Plot of the total outgoing connectedness of four groups - Depositories (red 
 solid line), Insurances (blue dashed line), Broker-Dealers (green dotted line), 
 Others (violet dash-dot line)'
 
