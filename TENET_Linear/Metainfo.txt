@@ -1,5 +1,5 @@
 ﻿
-Name of QuantLet: TENET_Linear
+Name of QuantLet: TENET_L
 
 Published in: TENET
 
