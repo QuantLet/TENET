@@ -121,6 +121,11 @@ for (k in 1:100) {
     # the estimated partial derivatives
     partial_der[l, ] = fit$c.fi
   }
+write.csv(lambda_sim,  file = paste("lambda_sim_", k, ".csv", sep = ""))
+write.csv(beta_sim,    file = paste("beta_sim_", k, ".csv", sep = ""))
+write.csv(covar_sim,   file = paste("covar_sim_", k, ".csv", sep = ""))
+write.csv(first_der,   file = paste("first_der_", k, ".csv", sep = ""))
+write.csv(partial_der, file = paste("partial_der_", k, ".csv", sep = ""))
 } 
 
 ```
