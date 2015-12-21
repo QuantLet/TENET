@@ -1,4 +1,7 @@
 
+# Step 1: The main code of TENET based on quantile regression for Single-Index
+# Model with Variable selection technique
+
 # clear all variables
 rm(list = ls(all = TRUE))
 graphics.off()
@@ -82,3 +85,127 @@ write.csv(covar_sim,   file = paste("covar_sim_", k, ".csv", sep = ""))
 write.csv(first_der,   file = paste("first_der_", k, ".csv", sep = ""))
 write.csv(partial_der, file = paste("partial_der_", k, ".csv", sep = ""))
 } 
+
+# Step 2: generate the necessory csv files for other TENET quantlets
+
+# number of columns in each partial derivative matrix
+cpd = 100
+# number of rows in each partial derivative matrix
+rpd = (n - ws)
+
+library(miscTools)
+# since each firm does not regress on itself, we need to insert a zero column
+# vector in the position of every firms' partial derivative matrix
+vec_zero = matrix(0, rpd, 1)
+der.c = array(0, dim = c(rpd, cpd, cpd))
+for (i in 1:100) {
+  der.c[, , i] = insertCol(as.matrix(read.csv(file = paste("partial_der_", i, ".csv", 
+  sep = "")))[, 2:100], i, vec_zero)
+}
+
+# generate the connnectedness matrix
+con = array(0, dim = c(cpd, cpd, rpd))
+for (i in 1:rpd) {
+  con.v = rep(0, 100)
+  for (j in 1:cpd) {
+    con.v = rbind(con.v, der.c[i, , j])
+  }
+  con[, , i] = con.v[-1, ]
+}
+
+# the date for the data files
+dt        = as.Date(x0[, 1], format = "%d/%m/%Y")[(ws + 1):314]
+Date      = strptime(as.character(dt), "%Y-%m-%d")
+Date1     = format(Date, "%d/%m/%Y")
+dt        = as.data.frame(Date1)
+names(dt) = "Date"
+
+# the total connectedness
+total.c = rep(0, rpd)
+for (i in 1:rpd) {
+  total.c[i] = sum(abs(con[, , i]))
+}
+
+# the average lambda series
+full.lambda = matrix(0, rpd, cpd)
+for (j in 1:100) {
+  lambda.firm      = read.csv(file = paste("lambda_sim_", j, ".csv", sep = ""))
+  full.lambda[, j] = as.matrix(lambda.firm)[, 2]
+}
+average_lambda = 1/cpd * (rowSums(full.lambda))
+tc_l           = cbind(dt, total.c, average_lambda)
+# generate the necessory file for the quantlet TENET_total_connectedness
+write.csv(tc_l, file = "total_connectedness_and_averaged_lambda.csv", row.names = FALSE)
+
+# total in groups 
+# in bank
+total.in.b = matrix(0, 266, 1)
+for (i in 1:rpd) {
+  total.in.b[i] = sum(abs(con[, , i])[1:25, ])
+}
+
+# in insurance
+total.in.ins = matrix(0, 266, 1)
+for (i in 1:rpd) {
+  total.in.ins[i] = sum(abs(con[, , i])[26:50, ])
+}
+
+# in broker dealer
+total.in.d = matrix(0, 266, 1)
+for (i in 1:rpd) {
+  total.in.d[i] = sum(abs(con[, , i])[51:75, ])
+}
+
+# in others
+total.in.o = matrix(0, 266, 1)
+for (i in 1:rpd) {
+  total.in.o[i] = sum(abs(con[, , i])[76:100, ])
+}
+tc_in = cbind(total.in.b, total.in.ins, total.in.d, total.in.o)
+colnames(tc_in) = c("Depositories_in", "Insurers_in", "Broker-Dealers_in", "Others_in")
+
+# total out groups 
+# out bank
+total.out.b = matrix(0, 266, 1)
+for (i in 1:rpd) {
+  total.out.b[i] = sum(abs(con[, , i])[, 1:25])
+}
+
+# out insurance
+total.out.ins = matrix(0, 266, 1)
+for (i in 1:rpd) {
+  total.out.ins[i] = sum(abs(con[, , i])[, 26:50])
+}
+
+# out broker dealer
+total.out.d = matrix(0, 266, 1)
+for (i in 1:rpd) {
+  total.out.d[i] = sum(abs(con[, , i])[, 51:75])
+}
+
+# out others
+total.out.o = matrix(0, 266, 1)
+for (i in 1:rpd) {
+  total.out.o[i] = sum(abs(con[, , i])[, 76:100])
+}
+tc_out = cbind(total.out.b, total.out.ins, total.out.d, total.out.o)
+colnames(tc_out) = c("Depositories_out", "Insurers_out", "Broker-Dealers_out", "Others_out")
+tc_group = cbind(dt, tc_in, tc_out)
+# generate the necessory file for the quantlet TENET_total_in_out_groups
+write.csv(tc_group, file = "total_in_and_out.csv", row.names = FALSE)
+
+# the connectedness matrix on the date 2009-06-12
+i = 80
+totc_t_80 = t(con[, , i])
+# generate the necessory file for the quantlet TENET_group_network
+write.csv(totc_t_80, file = "totc_JPM_t_80.csv")
+
+# the total connecteness matrix aggregated over windows
+tot.ct = matrix(0, cpd, cpd)
+for (i in 1:rpd) {
+  tot.ct = tot.ct + abs(con[, , i])
+}
+colnames(tot.ct) = colnames(xx0)
+# generate the necessory file for the quantlets TENET_total_in_out_individual and
+# TENET_SIFIs
+write.csv(tot.ct, file = "tot_c_overtime.csv", row.names = FALSE) 
