@@ -3,15 +3,12 @@ Name of QuantLet: TENET_SIFIs
 
 Published in: TENET
 
-Description: 'Ranks the risk receivers and the risk emitters, the top ten firms 
-of each group are identified as the systemically important financial insitutions
-(SIFIs)'
+Description: 'Ranks the risk receivers and the risk emitters, the top ten firms of each group are identified as the systemically important financial insitutions (SIFIs)'
 
-Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection,
-dimension reduction'
+Keywords: 'tail, quantile regression, CoVaR, systemic Risk, variable selection, dimension reduction'
 
 Author: Lining Yu
 
-Submitted:
+Submitted: 16.12.2015
 
 Datafile: 100 companylist 2012 classified by industry, tot_c_overtime.csv
