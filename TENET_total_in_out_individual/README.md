@@ -9,13 +9,13 @@ Name of QuantLet: TENET_total_in_out_individual
 
 Published in: TENET
 
-Description: Ranks the total incoming and outgoing links for each individual
+Description: Ranks the total incoming and outgoing links for each individual firm, and lists the first three most influential firms with respect to incoming and outgoing links for each firm
 
-Keywords: tail, quantile regression, CoVaR, systemic Risk, variable selection,
+Keywords: tail, quantile regression, CoVaR, systemic Risk, variable selection, dimension reduction
 
 Author: Lining Yu
 
-Submitted: 
+Submitted: 16.12.2015
 
 Datafile: tot_c_overtime.csv
 
