@@ -9,20 +9,19 @@ Name of QuantLet: TENET_total_in_out_groups
 
 Published in: TENET
 
-Description: Plots the total incoming and outgoing links of four financial
+Description: Plots the total incoming and outgoing links of four financial industry groups: Depositories (red solid line), Insurances (blue dashed line), Broker-Dealers (green dotted line), Others (violet dash-dot line)
 
-industry groups: Depositories (red solid line), Insurances (blue dashed line),
-
-Keywords: tail, quantile regression, CoVaR, systemic Risk, variable selection,
+Keywords: tail, quantile regression, CoVaR, systemic Risk, variable selection, dimension reduction
 
 Author: Lining Yu
 
-Submitted: 
+Submitted: 16.12.2015
 
 Datafile: total_in_and_out.csv
 
 Example: 
-- 'Plot of the total incoming connectedness of four groups: Depositories (red
+- Plot of the total incoming connectedness of four groups: Depositories (red solid line), Insurances (blue dashed line), Broker-Dealers (green dotted line), Others (violet dash-dot line)
+- Plot of the total outgoing connectedness of four groups: Depositories (red solid line), Insurances (blue dashed line), Broker-Dealers (green dotted line), Others (violet dash-dot line)
 
 ```
 <div align="center">
