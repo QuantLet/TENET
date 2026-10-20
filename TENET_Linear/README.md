@@ -9,17 +9,17 @@ Name of QuantLet: TENET_Linear
 
 Published in: TENET
 
-Description: estimates Conditional Value at Risk (CoVaR) of 100 financial
+Description: estimates Conditional Value at Risk (CoVaR) of 100 financial institutions by using linear quantile lasso algorithm. The 110 covariates include log returns of 99 firms (except for firm k) 7 macro state variables and 4 firm k’s characteristics. The data is not publicly published.
 
-Keywords: tail, quantile regression, CoVaR, systemic Risk, variable selection,
+Keywords: tail, quantile regression, CoVaR, systemic Risk, variable selection, dimension reduction, risk
 
 See also: quantilelasso, SIMqrL1, TENET_SIM
 
 Author: Weining Wang, Lining Yu
 
-Submitted: 
+Submitted: 16.12.2015
 
-Datafile: 100_firms_returns_and_macro_2015-04-15.csv, Bal_sheet.csv,
+Datafile: 100_firms_returns_and_macro_2015-04-15.csv, Bal_sheet.csv, VaR_movingwindows_20150617.csv
 
 Input: 
 - yw : (ws+1) response vector
