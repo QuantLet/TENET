@@ -9,17 +9,17 @@ Name of QuantLet: TENET_SIM
 
 Published in: TENET
 
-Description: estimates Conditional Value at Risk (CoVaR) of 100 financial
+Description: estimates Conditional Value at Risk (CoVaR) of 100 financial institutions by using Single-Index Model with variable selection. The 110 covariates include log returns of 99 firms (except for firm k) 7 macro state variables and 4 firm k’s characteristics. Then generates the necessory files for other TENET quantlets. The data is not publicly published.
 
-Keywords: tail, quantile regression, CoVaR, systemic Risk, variable selection,
+Keywords: tail, quantile regression, CoVaR, systemic Risk, variable selection, dimension reduction, risk, bic
 
-See also: quantilelasso, SIMqrL1, TENET_Linear, TENET_total_connectedness,
+See also: quantilelasso, SIMqrL1, TENET_Linear, TENET_total_connectedness, TENET_total_in_out_groups, TENET_group_network, TENET_total_in_out_individual, TENET_SIFIs, TENET_VaR_CoVaR
 
 Author: Weining Wang, Lining Yu
 
-Submitted: 
+Submitted: 16.12.2015
 
-Datafile: 100_firms_returns_and_macro_2015-04-15.csv, Bal_sheet.csv,
+Datafile: 100_firms_returns_and_macro_2015-04-15.csv, Bal_sheet.csv, VaR_movingwindows_20150617.csv
 
 Input: 
 - yw : (ws+1) response vector
